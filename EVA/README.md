@@ -131,7 +131,7 @@ frama-c -eva -eva-show-progress example.c
 frama-c -eva -eva-verbose 2 example.c
 
 # Unroll loops for better precision
-frama-c -eva -eva-unroll 10 example.c
+frama-c -eva -eva-min-loop-unroll 10 example.c
 ```
 
 ## Understanding EVA Output

@@ -181,7 +181,7 @@ int array_processing(int* data, int size) {
     }
     
     // Slicing pragma to slice on specific variable
-    //@ slice pragma expr sum;
+
     
     // When slicing on 'sum', only sum-related code is kept
     return sum;

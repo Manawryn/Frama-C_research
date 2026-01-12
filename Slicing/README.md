@@ -164,24 +164,15 @@ frama-c -slice-return function_name example.c
 # Slice on a specific variable at a function call
 frama-c -slice-calls function_name example.c
 
-# Slice on assertion at line N in file
-frama-c -slice-assert function_name example.c
-
 # Print the sliced code
-frama-c -slice-return main -then-on 'Slicing export' -print example.c
+frama-c example.c -slice-return main -then-on 'Slicing export' -print
 
 # Export sliced code to file
-frama-c -slice-return main -then-on 'Slicing export' -print -ocode sliced.c example.c
-
-# Slice on pragma in source code
-# In C code: //@ slice pragma expr variable_name;
-frama-c -slice-pragma variable_name example.c
+frama-c example.c -slice-return main -then-on 'Slicing export' -print -ocode sliced.c
 
 # Multiple slicing criteria
 frama-c -slice-return main -slice-return other_func example.c
 
-# Verbose output
-frama-c -slice-return main -slice-verbose 2 example.c
 ```
 
 ## Slicing Criteria

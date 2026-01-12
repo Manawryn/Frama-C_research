@@ -142,13 +142,13 @@ frama-c-gui -rte example.c
 frama-c -rte -print example.c
 
 # Generate only specific types of checks
-frama-c -rte -rte-select mem example.c          # Memory access errors
-frama-c -rte -rte-select div example.c          # Division by zero
-frama-c -rte -rte-select signed-overflow example.c  # Signed integer overflow
+frama-c -rte -rte-mem example.c          # Memory access errors
+frama-c -rte -rte-div example.c          # Division by zero
+frama-c -rte -warn-signed-overflow example.c  # Signed integer overflow
 
 # Generate for specific function
-frama-c -rte -main my_function example.c
-
+frama-c -rte -main modulo example.c
+frama-c -rte -main sybstract_intigers example.c
 # Save annotated code to file
 frama-c -rte -print -ocode annotated.c example.c
 
